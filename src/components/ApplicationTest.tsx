@@ -8,26 +8,37 @@ export const ApplicationTest = () => {
   const [proof, setProof] = useState<string[]>([]);
   const [score, setScore] = useState<number>(0);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  const [isPending, setIsPending] = useState<boolean>(false);
 
   const handleApplicationRequest = useCallback(async () => {
-    const response = await fetch(`/api/proof?address=${address}`);
-    if (response.status !== 200) {
+    setIsPending(true);
+
+    try {
+      const response = await fetch(`/api/proof?address=${address}`);
+      setIsPending(false);
+      if (response.status !== 200) {
+        setError(true);
+        setIsSuccess(false);
+        console.log("Error: ", response.statusText);
+
+        return;
+      }
+
+      setError(false);
+
+      const data = await response.json();
+      const { root, proof, score } = data;
+
+      setRoot(root);
+      setProof(proof);
+      setScore(score);
+      setIsSuccess(true);
+    } catch (e) {
+      console.log("Error: ", e);
       setError(true);
       setIsSuccess(false);
-      console.log("Error: ", response.statusText);
-
-      return;
+      setIsPending(false);
     }
-
-    setError(false);
-
-    const data = await response.json();
-    const { root, proof, score } = data;
-
-    setRoot(root);
-    setProof(proof);
-    setScore(score);
-    setIsSuccess(true);
   }, [address]);
 
   return (
@@ -67,7 +78,7 @@ export const ApplicationTest = () => {
         />
         <button
           onClick={handleApplicationRequest}
-          className="cursor-pointer whitespace-nowrap rounded-md bg-green-600 px-20 py-2 max-md:px-1 text-white hover:bg-green-500 max-md:w-full"
+          className="cursor-pointer whitespace-nowrap rounded-md bg-green-600 px-20 py-2 text-white hover:bg-green-500 max-md:w-full max-md:px-1"
         >
           Get params
         </button>
