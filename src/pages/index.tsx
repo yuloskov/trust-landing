@@ -2,16 +2,19 @@ import type { NextPage } from "next";
 import { MainLayout } from "../layouts/MainLayout";
 
 import { CheckScore } from "../components/CheckScore"
+import { ApplicationTest } from "../components/ApplicationTest"
 
 const Home: NextPage = () => {
   return (
     <MainLayout>
       <section className="mt-10 flex flex-col items-center justify-center">
-        <p className="text-7xl font-bold">Transactions are safe now.</p>
+        <p className="text-7xl font-bold text-center">Transactions are safe now.</p>
       </section>
       <section>
         <CheckScore />
       </section>
+
+      <ApplicationTest />
 
       <section className="mt-10 flex flex-col items-start justify-center rounded-md bg-green-200 p-10 md:w-6/12">
         <p className="mb-5 text-2xl font-bold">What is Score?</p>
@@ -43,8 +46,8 @@ const Home: NextPage = () => {
           Our project is dedicated to creating a more transparent and secure
           crypto environment for all users. We believe that by providing
           reliable information about wallets, we can help prevent fraud and
-          scams, and promote responsible use of cryptocurrencies. So whether
-          you are a seasoned crypto investor or just getting started, our trust
+          scams, and promote responsible use of cryptocurrencies. So whether you
+          are a seasoned crypto investor or just getting started, our trust
           score system can help you navigate the complex world of digital
           currencies with confidence. Join us today and experience the peace of
           mind that comes with knowing your crypto transactions are secure and
