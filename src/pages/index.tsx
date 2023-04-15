@@ -100,8 +100,8 @@ const Home: NextPage = () => {
         <p>
           Our Etherscan extension provides users with an easy way to access and
           analyze blockchain data on the Ethereum network. With this extension,
-          you can quickly view transaction details and Trust Score of the
-          wallet,
+          you can quickly view transaction details and Score of the
+          wallet.
         </p>
       </section>
     </MainLayout>
