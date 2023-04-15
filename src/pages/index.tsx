@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { MainLayout } from "../layouts/MainLayout";
 
-import Image from "next/image"
 import { CheckScore } from "../components/CheckScore"
 
 const Home: NextPage = () => {
@@ -45,7 +44,7 @@ const Home: NextPage = () => {
           crypto environment for all users. We believe that by providing
           reliable information about wallets, we can help prevent fraud and
           scams, and promote responsible use of cryptocurrencies. So whether
-          you're a seasoned crypto investor or just getting started, our trust
+          you are a seasoned crypto investor or just getting started, our trust
           score system can help you navigate the complex world of digital
           currencies with confidence. Join us today and experience the peace of
           mind that comes with knowing your crypto transactions are secure and
