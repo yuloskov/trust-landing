@@ -73,7 +73,7 @@ export const CheckScore = () => {
       {isSuccess && (
         <div className="mt-6 flex flex-col items-center justify-center gap-2">
           <p className="text-2xl font-bold">Wallet score is:</p>
-          <p className={`text-2xl font-bold ${getScoreColor(score)}`}>{score}</p>
+          <p className={`text-2xl font-bold ${getScoreColor(score)}`}>{score.toFixed(2)}</p>
         </div>
       )}
 
