@@ -67,7 +67,7 @@ export const ApplicationTest = () => {
         />
         <button
           onClick={handleApplicationRequest}
-          className="cursor-pointer whitespace-nowrap rounded-md bg-green-600 px-20 py-2 text-white hover:bg-green-500 max-md:w-full"
+          className="cursor-pointer whitespace-nowrap rounded-md bg-green-600 px-20 py-2 max-md:px-5 text-white hover:bg-green-500 max-md:w-full"
         >
           Get contract parameters
         </button>

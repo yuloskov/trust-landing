@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <MainLayout>
       <section className="mt-10 flex flex-col items-center justify-center">
-        <p className="text-center text-7xl font-bold">
+        <p className="text-center text-7xl font-bold max-md:text-5xl">
           Transactions are safe now.
         </p>
       </section>
