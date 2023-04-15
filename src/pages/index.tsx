@@ -8,13 +8,41 @@ const Home: NextPage = () => {
   return (
     <MainLayout>
       <section className="mt-10 flex flex-col items-center justify-center">
-        <p className="text-7xl font-bold text-center">Transactions are safe now.</p>
+        <p className="text-center text-7xl font-bold">
+          Transactions are safe now.
+        </p>
       </section>
       <section>
         <CheckScore />
       </section>
 
       <ApplicationTest />
+
+      <section className="mt-10 flex flex-col items-start justify-center rounded-md bg-blue-200 p-10">
+        <p className="mb-5 text-2xl font-bold">Contracts</p>
+        <p>
+          <a
+            href="https://goerli.etherscan.io/address/0xd3357Dc0F30316E539fB2f5dc55D09f48f3f3D53"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-700 underline"
+          >
+            Score state contract{" "}
+          </a>
+          - you can verify your score here.
+        </p>
+        <p>
+          <a
+            href="https://goerli.etherscan.io/address/0x5838420606a09C90a56A0f352f4198Ff09f718c8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-700 underline"
+          >
+            Example faucet contract{" "}
+          </a>
+          - you can claim your tokens here, if you are eligible.
+        </p>
+      </section>
 
       <section className="mt-10 flex flex-col items-start justify-center rounded-md bg-green-200 p-10 md:w-6/12">
         <p className="mb-5 text-2xl font-bold">What is Score?</p>
