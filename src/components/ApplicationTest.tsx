@@ -78,7 +78,9 @@ export const ApplicationTest = () => {
         />
         <button
           onClick={handleApplicationRequest}
-          className="cursor-pointer whitespace-nowrap rounded-md bg-green-600 px-20 py-2 text-white hover:bg-green-500 max-md:w-full max-md:px-1"
+          className={`cursor-pointer whitespace-nowrap rounded-md bg-green-600 px-20 py-2 text-white hover:bg-green-500 max-md:w-full max-md:px-1 ${
+            isPending ? "animate-pulse" : ""
+          }`}
         >
           Get params
         </button>
