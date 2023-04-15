@@ -92,7 +92,9 @@ export const ApplicationTest = () => {
             <div className="flex flex-col gap-1">
               {proof.map((p, i) => (
                 <p className="break-all" key={i}>
+                  {i === 0 && "["}
                   {p}
+                  {i !== proof.length - 1 ? "," : "]"}
                 </p>
               ))}
             </div>
